@@ -1,0 +1,161 @@
+body{
+    font-family: Arial,sans-serif;
+    margin: 0;
+    padding: 0;
+}
+header{
+    background-color: #333;
+    color: #fff;
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header h1{
+    margin: 0;
+}
+header input{
+    display: none;
+}
+.menu-icon{
+    display: none;
+}
+nav{
+    display: flex;
+}
+nav ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display:flex;
+}
+nav ul li{
+    margin-right: 20px;
+}
+nav ul li a{
+    color: #fff;
+    text-decoration: none;
+}
+section{
+    padding: 50px;
+}
+
+section h2{
+    margin-top: 10;
+    margin: 20px;
+}
+
+#menuItems{
+    margin: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
+    gap:30px;
+}
+.menuItem{
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: transform 0.3s,box-shadow 0.3s;
+    position: relative;
+}
+.menuItem img{
+    width: 100%;
+    height: 350px;
+    border-radius: 5px;
+    border-bottom: 1px solid #ddd;
+}
+.menuItem h3{
+    margin: 10px;
+}
+.menuItem p{
+    margin: 10px;
+}
+.menuItem:hover,.menuItem.hover{
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+.phone-number{
+    display: flex;
+    align-items: center;
+    font-size: 40px;
+    color: #333;
+}
+.phone-number i{
+    margin-right: 10px;
+    font-size: 25px;
+    color: #007BFF;
+}
+.footer{
+    background-color: black;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+.copyright{
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+@media screen and (max-width:600px){
+    header{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .menu-icon{
+        display: block;
+        cursor: pointer;
+        color: #fff;
+        font-size: 24px;
+    }
+    nav{
+        display: none;
+        width: 100%;
+    }
+    input[type="checkbox"]{
+        display: none;
+    }
+    input[type="checkbox"]:checked + label +nav{
+        display: block;
+    }
+    nav ul{
+        flex-direction: column;
+        width: 100%;
+    }
+    nav ul li{
+        margin: 10px 0;
+    }
+    #menuItems{
+        grid-template-columns: 1fr;
+    }
+    .menuItem img{
+        width: 100%;
+        height: 250px;
+        border-radius: 5px;
+        border-bottom: 1px solid #ddd;
+    }
+    .menuItem{
+        touch-action: manipulation;
+    }
+    .phone-number{
+        display: flex;
+        align-items: center;
+        font-size: 20px;
+        color: #333;
+    }
+    .phone-number i{
+        margin-right: 10px;
+        font-size: 15px;
+        color: #007BFF;
+    }
+    .footer{
+        background-color: black;
+        color: white;
+        padding:15px;
+        text-align: center;
+    }
+    .copyright{
+        margin-top: 10px;
+        font-size: 16px;
+    }
+}
